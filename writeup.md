@@ -58,7 +58,9 @@ My model consists of a neural network inspired NVIDIA team (https://devblogs.nvi
 The model includes RELU layers after each CovNet to introduce nonlinearity (code line 167-171 ), and the data is normalized in the model using a Keras lambda layer (code line 164). 
 
 #### 2. Attempts to reduce overfitting in the model
+
 At the moment I see no overfitting as the mse in the training and validation sets are very similar.
+
 #### 3. Model parameter tuning
 
 The model used an adam optimizer, with a learning rate of 0.002. This seems to yield the better driving results.
@@ -67,6 +69,9 @@ The model used an adam optimizer, with a learning rate of 0.002. This seems to y
 
 Since I wanted to make sure I had a good model going on I used the Udacity data, since I have read online and in the forums
 people have gotten good results with this.
+
+I did however tried to record my data with the runs as suggested in the lessons. However it often happened that updated
+the data and my model would end up doing worse. That is why I decided to stick with the Udacity data.   
 
 ### Model Architecture and Training Strategy
 
@@ -82,15 +87,12 @@ zero.
 In order to alleviate this, one can add the left and right images which introduce more data at non-zero angles. Additionally,
 a random height and width shift which also introduces corresponding changes in the steering angle. This transformation in
 addition to a random brightness and a horizontal random shift are applied to ALL images. The steering angle distribution of
-all the augmented imaged is shown figure ...
+all the augmented images is shown in the following figure. 
 
-![alt text][image2]
-
+![alt text][image3]
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. 
-
 The final step was to run the simulator to see how well the car was driving around track one. 
-
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
@@ -101,22 +103,6 @@ My model consists of a neural network inspired NVIDIA team (https://devblogs.nvi
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To augment the dataset, I transformed the images randomly applying random shifts in : horizontal orientation, brightness and (small) random height and weight shifts. With the height and weight shifts the steering angle was modified accordingly. I think that having dataset that resebles actual driving is crucial. That is why this random shifts in in steering angles are important 
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
-
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
-
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-I finally randomly shuffled the data set and put 20% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+After the collection process, I around 30000 images counting left and right images. This data was preprocessed with the augmentation just mentioned, the normalization and the cropping. I finally randomly shuffled the data set and put 20% of the data into a validation set. The model did not show signs of overfitting since the training erros was ... and the validation erros was ... . 
