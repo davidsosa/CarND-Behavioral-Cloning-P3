@@ -19,12 +19,11 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/model.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/angles_before_augment_udacitydata.png "Udacity Data Before Augmentation"
-[image4]: ./examples/angles_after_augment_udacitydata.png "Udacity Data After Augmentation"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image2]: ./examples/angles_before_augment_udacitydata.png "Udacity Data Before Augmentation"
+[image3]: ./examples/angles_before_augment_udacitydata.png "Udacity Data After Augmentation"
+[image4]: ./examples/placeholder_small.png "Recovery Image"
+[image5]: ./examples/placeholder_small.png "Normal Image"
+[image6]: ./examples/placeholder_small.png "Flipped Image"
 
 ## Rubric Points
 ### Here I consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
