@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/model.png "Model Visualization"
 [image2]: ./examples/angles_before_augment_udacitydata.png "Udacity Data Before Augmentation"
-[image3]: ./examples/angles_before_augment_udacitydata.png "Udacity Data After Augmentation"
+[image3]: ./examples/angles_after_augment_udacitydata.png "Udacity Data After Augmentation"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Normal Image"
 [image6]: ./examples/placeholder_small.png "Flipped Image"
